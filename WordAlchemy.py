@@ -387,3 +387,4 @@ if __name__ == "__main__":
 
     # commit the changes to the database
     conn.commit()
+
