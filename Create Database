@@ -1,0 +1,19 @@
+CREATE SCHEMA Base;
+
+CREATE TABLE Base.Words (
+  Word VARCHAR(25),
+  PRIMARY KEY (Word)
+);
+
+CREATE TABLE Base.Categories (
+  Category VARCHAR(100),
+  Is_Base BOOLEAN,
+  PRIMARY KEY (Category)
+);
+
+CREATE TABLE Base.Is_In (
+  Word VARCHAR(25),
+  Category VARCHAR(100),
+  FOREIGN KEY (Word) REFERENCES Base.Words(Word),
+  FOREIGN KEY (Category) REFERENCES Base.Categories(Category)
+);

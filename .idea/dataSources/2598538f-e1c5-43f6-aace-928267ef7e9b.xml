@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="wordAlc - wordAlc@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="2.6">
+    <database id="1" name="wordAlc">
+      <object-id>17585</object-id>
+      <visible>1</visible>
+    </database>
+    <database id="2" name="postgres">
+      <object-id>12938</object-id>
+    </database>
+    <database id="3" name="lab8">
+      <object-id>16393</object-id>
+    </database>
+    <schema id="4" parent="1" name="public">
+      <object-id>2200</object-id>
+      <visible>1</visible>
+      <introspection-timestamp>2018-09-22.23:11:00.529</introspection-timestamp>
+    </schema>
+    <schema id="5" parent="1" name="pg_catalog">
+      <object-id>11</object-id>
+    </schema>
+    <schema id="6" parent="1" name="pg_toast">
+      <object-id>99</object-id>
+    </schema>
+    <schema id="7" parent="1" name="pg_temp_1">
+      <object-id>11736</object-id>
+    </schema>
+    <schema id="8" parent="1" name="pg_toast_temp_1">
+      <object-id>11737</object-id>
+    </schema>
+    <schema id="9" parent="1" name="information_schema">
+      <object-id>12648</object-id>
+    </schema>
+    <schema id="10" parent="1" name="base">
+      <object-id>17586</object-id>
+      <visible>1</visible>
+      <introspection-state-number>18007545</introspection-state-number>
+      <introspection-timestamp>2018-09-22.23:11:00.529</introspection-timestamp>
+    </schema>
+    <table id="11" parent="10" name="categories">
+      <object-id>17944</object-id>
+      <state-number>18007545</state-number>
+    </table>
+    <table id="12" parent="10" name="is_in">
+      <object-id>17949</object-id>
+      <state-number>18007545</state-number>
+    </table>
+    <table id="13" parent="10" name="words">
+      <object-id>17939</object-id>
+      <state-number>18007545</state-number>
+    </table>
+    <column id="14" parent="11" name="category">
+      <state-number>18007544</state-number>
+      <mandatory>1</mandatory>
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="15" parent="11" name="is_base">
+      <state-number>18007544</state-number>
+      <data-type>boolean|0</data-type>
+    </column>
+    <index id="16" parent="11" name="categories_pkey">
+      <object-id>17947</object-id>
+      <columns>category</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="17" parent="11" name="categories_pkey">
+      <object-id>17948</object-id>
+      <columns>category</columns>
+      <underlying-index>categories_pkey</underlying-index>
+      <primary>1</primary>
+    </key>
+    <column id="18" parent="12" name="word">
+      <state-number>18007545</state-number>
+      <data-type>varchar(25)|0</data-type>
+    </column>
+    <column id="19" parent="12" name="category">
+      <state-number>18007545</state-number>
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <foreign-key id="20" parent="12" name="is_in_word_fkey">
+      <object-id>17952</object-id>
+      <columns>word</columns>
+      <ref-key>~.words.words_pkey</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="21" parent="12" name="is_in_category_fkey">
+      <object-id>17957</object-id>
+      <columns>category</columns>
+      <ref-key>~.categories.categories_pkey</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="22" parent="13" name="word">
+      <state-number>18007543</state-number>
+      <mandatory>1</mandatory>
+      <data-type>varchar(25)|0</data-type>
+    </column>
+    <index id="23" parent="13" name="words_pkey">
+      <object-id>17942</object-id>
+      <columns>word</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="24" parent="13" name="words_pkey">
+      <object-id>17943</object-id>
+      <columns>word</columns>
+      <underlying-index>words_pkey</underlying-index>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>

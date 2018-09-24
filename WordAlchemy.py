@@ -370,7 +370,13 @@ def send_tweets():
     return
 
 if __name__ == "__main__":
-    # connect to the database
+    # connect to the database.
+    # If you want to run this yourself, you'll need to input your own PostgreSQL database information
+    # The Schema for my database is in the "Create Database.txt" file in this directory.
+    # You may notice my database is not very secure.
+    # Considering that this project is meant to be run by individuals on their machines,
+    # I don't think that's an issue.
+
     conn = psycopg2.connect("dbname=wordAlc user=postgres password=postgres host=localhost")
     curr = conn.cursor()
 
