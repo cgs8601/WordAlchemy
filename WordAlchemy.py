@@ -2,6 +2,12 @@ import tweepy
 import random
 import psycopg2
 
+# formulas sourced from:
+# Caley, E. R. & Jensen, W. B. (2008). The Leyden and Stockholm papyri:
+#   Greco-Egyptian chemical documents from the early 4th century AD (Chapter 2).
+#   Cincinnati, OH: Oesper Collections in the History of Chemistry
+#   Retrieved from: http://www.che.uc.edu/jensen/w.%20b.%20jensen/Books/Leyden%20&%20Stockholm%20Papyri.pdf
+
 # the input filename
 categoriesFileName = "categories.txt"
 
