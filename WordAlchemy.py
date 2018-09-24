@@ -211,7 +211,7 @@ def get_word(categories, used_words, exclude = None):
 # Dynamically generates the recipe
 def generate_formula():
     # randomly select a formula to use from the available (hardcoded) stock
-    formulaNum = random.randint(0, 5)
+    formulaNum = random.randint(0, 6)
 
     formula = []
 
@@ -221,7 +221,7 @@ def generate_formula():
     # the initial category for the formula
     category = get_base_category(used_categories)
 
-    formulaNum = 6
+    # formulaNum = 6
 
     # generate the first formula
     if(formulaNum == 0):
