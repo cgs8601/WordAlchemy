@@ -372,6 +372,7 @@ def send_tweets():
 if __name__ == "__main__":
     # connect to the database.
     # If you want to run this yourself, you'll need to input your own PostgreSQL database information
+    # PostgreSQL was used merely because that is the only SQL variant I had already installed on my machine.
     # The Schema for my database is in the "Create Database.txt" file in this directory.
     # You may notice my database is not very secure.
     # Considering that this project is meant to be run by individuals on their machines,
